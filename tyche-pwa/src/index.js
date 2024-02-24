@@ -12,6 +12,18 @@ root.render(
   </React.StrictMode>
 );
 
+const express = require('express')
+const app = express()
+const port = 3001
+
+app.get('/', (req, res) => {
+  res.status(200).send('Hello World!');
+})
+
+app.listen(port, () => {
+  console.log(`App running on port ${port}.`)
+})
+
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://cra.link/PWA
